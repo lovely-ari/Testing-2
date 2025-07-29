@@ -8,26 +8,46 @@
     <link rel="stylesheet" href="">
     <!-- Put css here if you don't have an external style sheet-->
     <style>
+    
+    .box {
+  float: left;
+  height: 20px;
+  width: 20px;
+  margin-bottom: 15px;
+  border: 1px solid black;
+  clear: both;
+}
+
+.red {
+  background-color: red;
+}
+    
     </style>
     <!-- For Javascript -->
     <script>
     	function balert() {
-    		window.alert("bored...");
-            
-    	
-    	}
+    		window.alert("This is a color game where a color shows and you'll have to guess the name of the color! Easy mode :)");
+    +
+    }
+    
     
     
     </script>
   </head>
   <body>
-  
-  	<button type="button" onclick="balert()">class</button>
     
     <div class="">
-      <h1>Boring...</h1>
-      <p>This is a paragraph about how boring class is.</p>
-      <p>This is another paragraph about the same topic as the paragrapg previously.</p>
+      <h1>Guess the Color Game</h1>
+      
+      <button type="button" onclick="balert()">Directions</button>
+      
+      <p>Start:</p>
+      
+      <div class='box red'></div> <br>
+      
+      <input type="text" id="fname" name="fname"><br><br>
+
+      
     </div>
   </body>
 </html> 
