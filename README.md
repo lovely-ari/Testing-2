@@ -16,6 +16,7 @@
   margin-bottom: 15px;
   border: 1px solid black;
   clear: both;
+  background-color:blue;
 }
 
 .red {
@@ -27,27 +28,39 @@
     <script>
     	function balert() {
     		window.alert("This is a color game where a color shows and you'll have to guess the name of the color! Easy mode :)");
-    +
-    }
+    	}
     
+    	function randomizer() {
+        	var colornumber= Math.round(Math.random() * 26);
+            console.log(colornumber);
+            var box = document.getElementById("elena box");
+            box.style.background-color = "red";
+       	}
+            
     
+    const colors = ["red", "orange", "yellow", "green", "blue", "purple", "pink", "black", "white", "gray", "grey", "magenta", "crimson", "gold", "teal", "silver", "cyan", "lilac", "beige", "baby blue", "brown", "torquise", "lavendar", "aqua", "navy blue","lime", "violet"];
     
     </script>
   </head>
   <body>
     
-    <div class="">
+     <div class="game">
       <h1>Guess the Color Game</h1>
       
-      <button type="button" onclick="balert()">Directions</button>
+      <button type="button" onclick="balert()">Directions </button>
       
       <p>Start:</p>
       
-      <div class='box red'></div> <br>
+      <p12 id = "elena box">
+      <div class='box'></div>
+      </p12> <br>
       
       <input type="text" id="fname" name="fname"><br><br>
+      
+      
+      <button type="button" onclick="randomizer()">Submit </button>
+     </div>
+      
+  </body>
 
       
-    </div>
-  </body>
-</html> 
