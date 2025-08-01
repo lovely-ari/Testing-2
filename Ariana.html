@@ -26,17 +26,27 @@
     </style>
     <!-- For Javascript -->
     <script>
+        const colors = ["red", "orange", "yellow", "green", "blue", "purple", "pink", "black", "white", "gray", "grey", "magenta", "crimson", "gold", "teal", "silver", "cyan", "lilac", "beige", "baby blue", "brown", "torquise", "lavendar", "aqua", "navyblue","lime", "violet"];
+
     	function balert() {
-    		window.alert("This is a color game where a color shows and you'll have to guess the name of the color! Easy mode :)");
+    		window.alert("This is a color game where a color shows and you'll have to guess the name of the color! Make sure the color you put is all lowercased!");
     	}
     
     	function randomizer() {
         	var colornumber= Math.round(Math.random() * 26);
-            document.getElementById("elena box").style.background-color = "red";
-       	}
             
-    
-    const colors = ["red", "orange", "yellow", "green", "blue", "purple", "pink", "black", "white", "gray", "grey", "magenta", "crimson", "gold", "teal", "silver", "cyan", "lilac", "beige", "baby blue", "brown", "torquise", "lavendar", "aqua", "navy blue","lime", "violet"];
+            
+            document.getElementById("fname").value;
+            var horse=document.getElementById("fname").value;
+            if (horse==colors[colornumber]){
+            window.alert("Correct!");
+            }
+            
+            console.log(horse);
+            console.log(colors[colornumber]);
+            
+            document.getElementById("elena box").style.backgroundColor = colors[colornumber];
+       	}
     
     </script>
   </head>
@@ -49,9 +59,7 @@
       
       <p>Start:</p>
       
-      <p12 id = "elena box">
-      <div class='box'></div>
-      </p12> <br>
+      <div id = "elena box" class='box'></div>
       
       <input type="text" id="fname" name="fname"><br><br>
       
