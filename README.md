@@ -32,9 +32,7 @@
     
     	function randomizer() {
         	var colornumber= Math.round(Math.random() * 26);
-            console.log(colornumber);
-            var box = document.getElementById("elena box");
-            box.style.background-color = "red";
+            document.getElementById("elena box").style.background-color = "red";
        	}
             
     
