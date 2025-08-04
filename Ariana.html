@@ -32,19 +32,28 @@
     		window.alert("This is a color game where a color shows and you'll have to guess the name of the color! Make sure the color you put is all lowercased!");
     	}
     
+    var colornumber = 4;
+    var score=0;
+    
     	function randomizer() {
-        	var colornumber= Math.round(Math.random() * 26);
-            
             
             document.getElementById("fname").value;
             var horse=document.getElementById("fname").value;
+            
             if (horse==colors[colornumber]){
-            window.alert("Correct!");
+            	window.alert("Correct!");
+                score = score + 1;
+            } else {
+                window.alert("Incorrect...! It's ok!");
+                score = score - 1;
             }
+            
+            document.getElementById("score").innerHTML = score;
             
             console.log(horse);
             console.log(colors[colornumber]);
             
+            colornumber= Math.round(Math.random() * 26);
             document.getElementById("elena box").style.backgroundColor = colors[colornumber];
        	}
     
@@ -53,7 +62,7 @@
   <body>
     
      <div class="game">
-      <h1>Guess the Color Game</h1>
+      <h1>Guess the Color Game　　　　　　　　Score: <span id="score"></span></h1>
       
       <button type="button" onclick="balert()">Directions </button>
       
@@ -61,8 +70,7 @@
       
       <div id = "elena box" class='box'></div>
       
-      <input type="text" id="fname" name="fname"><br><br>
-      
+      <input type="text" onfocus="this.value=''" id="fname" name="fname"><br><br>
       
       <button type="button" onclick="randomizer()">Submit </button>
      </div>
